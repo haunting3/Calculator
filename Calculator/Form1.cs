@@ -38,52 +38,80 @@ namespace Calculator
 
         private void buttonZero_Click(object sender, EventArgs e)
         {
-            textBoxResult.Text += "0";
+            if(textBoxResult.Text != "0")
+                textBoxResult.Text += "0";
         }
 
         private void buttonOne_Click(object sender, EventArgs e)
         {
-            textBoxResult.Text += "1";
+            if (textBoxResult.Text != "0")
+                textBoxResult.Text += "1";
+            else
+                textBoxResult.Text = "1";
         }
 
         private void buttonTwo_Click(object sender, EventArgs e)
         {
-            textBoxResult.Text += "2";
+            if (textBoxResult.Text != "0")
+                textBoxResult.Text += "2";
+            else
+                textBoxResult.Text = "2";
         }
 
         private void buttonThree_Click(object sender, EventArgs e)
         {
-            textBoxResult.Text += "3";
+            if (textBoxResult.Text != "0")
+                textBoxResult.Text += "3";
+            else
+                textBoxResult.Text = "3";
         }
 
         private void buttonFour_Click(object sender, EventArgs e)
         {
-            textBoxResult.Text += "4";
+            if (textBoxResult.Text != "0")
+                textBoxResult.Text += "4";
+            else
+                textBoxResult.Text = "4";
         }
 
         private void buttonFive_Click(object sender, EventArgs e)
         {
-            textBoxResult.Text += "5";
+            if (textBoxResult.Text != "0")
+                textBoxResult.Text += "5";
+            else
+                textBoxResult.Text = "5";
         }
 
         private void buttonSix_Click(object sender, EventArgs e)
         {
-            textBoxResult.Text += "6";
+            if (textBoxResult.Text != "0")
+                textBoxResult.Text += "6";
+            else
+                textBoxResult.Text = "6";
         }
 
         private void buttonSeven_Click(object sender, EventArgs e)
         {
-            textBoxResult.Text += "7";
+            if (textBoxResult.Text != "0")
+                textBoxResult.Text += "7";
+            else
+                textBoxResult.Text = "7";
         }
 
         private void buttonEight_Click(object sender, EventArgs e)
         {
-            textBoxResult.Text += "8";
+            if (textBoxResult.Text != "0")
+                textBoxResult.Text += "8";
+            else
+                textBoxResult.Text = "8";
         }
 
         private void buttonNine_Click(object sender, EventArgs e)
         {
-            textBoxResult.Text += "9";
+            if (textBoxResult.Text != "0")
+                textBoxResult.Text += "9";
+            else
+                textBoxResult.Text = "9";
         }
 
         private void buttonResult_Click(object sender, EventArgs e)
