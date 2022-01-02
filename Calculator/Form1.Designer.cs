@@ -190,6 +190,7 @@ namespace Calculator
             this.buttonMultiplication.TabIndex = 11;
             this.buttonMultiplication.Text = "x";
             this.buttonMultiplication.UseVisualStyleBackColor = false;
+            this.buttonMultiplication.Click += new System.EventHandler(this.buttonMultiplication_Click);
             // 
             // buttonNine
             // 

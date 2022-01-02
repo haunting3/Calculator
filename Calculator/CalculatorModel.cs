@@ -19,5 +19,9 @@ namespace Calculator.Models
         {
             return NumberOne - NumberTwo;
         }
+        public double Multiplication()
+        {
+            return NumberOne * NumberTwo;
+        }
     }
 }

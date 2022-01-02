@@ -98,6 +98,9 @@ namespace Calculator
                 case "-":
                     presenter.CalcSubtraction();
                     break;
+                case "*":
+                    presenter.CalcMultiplication();
+                    break;
             }
             textBoxResult.Text = TextResult;
         }
@@ -112,6 +115,13 @@ namespace Calculator
         private void buttonSubtraction_Click(object sender, EventArgs e)
         {
             mathOperator = "-";
+            TextNumberOne = textBoxResult.Text;
+            textBoxResult.Text = "0";
+        }
+
+        private void buttonMultiplication_Click(object sender, EventArgs e)
+        {
+            mathOperator = "*";
             TextNumberOne = textBoxResult.Text;
             textBoxResult.Text = "0";
         }
