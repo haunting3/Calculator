@@ -114,6 +114,11 @@ namespace Calculator
                 textBoxResult.Text = "9";
         }
 
+        private void buttonDot_Click(object sender, EventArgs e)
+        {
+            textBoxResult.Text += ".";
+        }
+
         private void buttonResult_Click(object sender, EventArgs e)
         {
             TextNumberTwo = textBoxResult.Text;
@@ -162,6 +167,12 @@ namespace Calculator
             mathOperator = "/";
             TextNumberOne = textBoxResult.Text;
             textBoxResult.Text = "0";
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            if(textBoxResult.Text.Length != 0)
+                textBoxResult.Text = textBoxResult.Text.Remove(textBoxResult.Text.Length - 1);
         }
     }
 }

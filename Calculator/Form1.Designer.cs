@@ -115,6 +115,7 @@ namespace Calculator
             this.buttonDelete.TabIndex = 3;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonDivison
             // 
@@ -401,6 +402,7 @@ namespace Calculator
             this.buttonDot.TabIndex = 22;
             this.buttonDot.Text = ".";
             this.buttonDot.UseVisualStyleBackColor = false;
+            this.buttonDot.Click += new System.EventHandler(this.buttonDot_Click);
             // 
             // buttonZero
             // 
