@@ -16,5 +16,16 @@ namespace Calculator
         {
             InitializeComponent();
         }
+
+        private void buttonResult_MouseEnter(object sender, EventArgs e)
+        {
+            buttonResult.BackColor = Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(111)))), ((int)(((byte)(184)))));
+
+        }
+
+        private void buttonResult_MouseLeave(object sender, EventArgs e)
+        {
+            buttonResult.BackColor = Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(67)))), ((int)(((byte)(105)))));
+        }
     }
 }
