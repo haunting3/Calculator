@@ -23,5 +23,9 @@ namespace Calculator.Models
         {
             return NumberOne * NumberTwo;
         }
+        public double Divison()
+        {
+            return NumberOne / NumberTwo;
+        }
     }
 }

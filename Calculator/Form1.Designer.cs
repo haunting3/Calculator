@@ -130,6 +130,7 @@ namespace Calculator
             this.buttonDivison.TabIndex = 7;
             this.buttonDivison.Text = "/";
             this.buttonDivison.UseVisualStyleBackColor = false;
+            this.buttonDivison.Click += new System.EventHandler(this.buttonDivison_Click);
             // 
             // buttonSquareRoot
             // 

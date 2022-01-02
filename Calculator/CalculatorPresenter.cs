@@ -42,5 +42,11 @@ namespace Calculator.Presenters
             ConnectBetweenModelAndView();
             calculatorView.TextResult = _calculator.Multiplication().ToString();
         }
+
+        public void CalcDivison()
+        {
+            ConnectBetweenModelAndView();
+            calculatorView.TextResult = _calculator.Divison().ToString();
+        }
     }
 }

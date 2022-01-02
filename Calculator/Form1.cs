@@ -101,6 +101,9 @@ namespace Calculator
                 case "*":
                     presenter.CalcMultiplication();
                     break;
+                case "/":
+                    presenter.CalcDivison();
+                    break;
             }
             textBoxResult.Text = TextResult;
         }
@@ -122,6 +125,13 @@ namespace Calculator
         private void buttonMultiplication_Click(object sender, EventArgs e)
         {
             mathOperator = "*";
+            TextNumberOne = textBoxResult.Text;
+            textBoxResult.Text = "0";
+        }
+
+        private void buttonDivison_Click(object sender, EventArgs e)
+        {
+            mathOperator = "/";
             TextNumberOne = textBoxResult.Text;
             textBoxResult.Text = "0";
         }
