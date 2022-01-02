@@ -253,6 +253,7 @@ namespace Calculator
             this.buttonSubtraction.TabIndex = 15;
             this.buttonSubtraction.Text = "-";
             this.buttonSubtraction.UseVisualStyleBackColor = false;
+            this.buttonSubtraction.Click += new System.EventHandler(this.buttonSubtraction_Click);
             // 
             // buttonSix
             // 

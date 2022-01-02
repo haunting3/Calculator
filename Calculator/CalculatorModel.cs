@@ -14,5 +14,10 @@ namespace Calculator.Models
         {
             return NumberOne + NumberTwo;
         }
+
+        public double Subtraction()
+        {
+            return NumberOne - NumberTwo;
+        }
     }
 }

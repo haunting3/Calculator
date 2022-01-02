@@ -25,6 +25,7 @@ namespace Calculator
         public string TextNumberTwo { get; set; }
         public string TextResult { get; set; }
 
+        public string mathOperator = null;
         private void buttonResult_MouseEnter(object sender, EventArgs e)
         {
             buttonResult.BackColor = Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(111)))), ((int)(((byte)(184)))));
@@ -89,12 +90,28 @@ namespace Calculator
         {
             TextNumberTwo = textBoxResult.Text;
             presenter = new CalculatorPresenter(this);
-            presenter.CalcSum();
+            switch (mathOperator)
+            {
+                case "+":
+                    presenter.CalcSum();
+                    break;
+                case "-":
+                    presenter.CalcSubtraction();
+                    break;
+            }
             textBoxResult.Text = TextResult;
         }
 
         private void buttonSum_Click(object sender, EventArgs e)
         {
+            mathOperator = "+";
+            TextNumberOne = textBoxResult.Text;
+            textBoxResult.Text = "0";
+        }
+
+        private void buttonSubtraction_Click(object sender, EventArgs e)
+        {
+            mathOperator = "-";
             TextNumberOne = textBoxResult.Text;
             textBoxResult.Text = "0";
         }
