@@ -205,6 +205,7 @@ namespace Calculator
             this.buttonNine.TabIndex = 10;
             this.buttonNine.Text = "9";
             this.buttonNine.UseVisualStyleBackColor = false;
+            this.buttonNine.Click += new System.EventHandler(this.buttonNine_Click);
             // 
             // buttonEight
             // 
@@ -220,6 +221,7 @@ namespace Calculator
             this.buttonEight.TabIndex = 9;
             this.buttonEight.Text = "8";
             this.buttonEight.UseVisualStyleBackColor = false;
+            this.buttonEight.Click += new System.EventHandler(this.buttonEight_Click);
             // 
             // buttonSeven
             // 
@@ -235,6 +237,7 @@ namespace Calculator
             this.buttonSeven.TabIndex = 8;
             this.buttonSeven.Text = "7";
             this.buttonSeven.UseVisualStyleBackColor = false;
+            this.buttonSeven.Click += new System.EventHandler(this.buttonSeven_Click);
             // 
             // buttonSubtraction
             // 
@@ -265,6 +268,7 @@ namespace Calculator
             this.buttonSix.TabIndex = 14;
             this.buttonSix.Text = "6";
             this.buttonSix.UseVisualStyleBackColor = false;
+            this.buttonSix.Click += new System.EventHandler(this.buttonSix_Click);
             // 
             // buttonFive
             // 
@@ -280,6 +284,7 @@ namespace Calculator
             this.buttonFive.TabIndex = 13;
             this.buttonFive.Text = "5";
             this.buttonFive.UseVisualStyleBackColor = false;
+            this.buttonFive.Click += new System.EventHandler(this.buttonFive_Click);
             // 
             // buttonFour
             // 
@@ -295,6 +300,7 @@ namespace Calculator
             this.buttonFour.TabIndex = 12;
             this.buttonFour.Text = "4";
             this.buttonFour.UseVisualStyleBackColor = false;
+            this.buttonFour.Click += new System.EventHandler(this.buttonFour_Click);
             // 
             // buttonSum
             // 
@@ -325,6 +331,7 @@ namespace Calculator
             this.buttonThree.TabIndex = 18;
             this.buttonThree.Text = "3";
             this.buttonThree.UseVisualStyleBackColor = false;
+            this.buttonThree.Click += new System.EventHandler(this.buttonThree_Click);
             // 
             // buttonTwo
             // 
@@ -340,6 +347,7 @@ namespace Calculator
             this.buttonTwo.TabIndex = 17;
             this.buttonTwo.Text = "2";
             this.buttonTwo.UseVisualStyleBackColor = false;
+            this.buttonTwo.Click += new System.EventHandler(this.buttonTwo_Click);
             // 
             // buttonOne
             // 
@@ -355,6 +363,7 @@ namespace Calculator
             this.buttonOne.TabIndex = 16;
             this.buttonOne.Text = "1";
             this.buttonOne.UseVisualStyleBackColor = false;
+            this.buttonOne.Click += new System.EventHandler(this.buttonOne_Click);
             // 
             // buttonResult
             // 
@@ -402,6 +411,7 @@ namespace Calculator
             this.buttonZero.TabIndex = 21;
             this.buttonZero.Text = "0";
             this.buttonZero.UseVisualStyleBackColor = false;
+            this.buttonZero.Click += new System.EventHandler(this.buttonZero_Click);
             // 
             // buttonSign
             // 
