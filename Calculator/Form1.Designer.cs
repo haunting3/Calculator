@@ -316,6 +316,7 @@ namespace Calculator
             this.buttonSum.TabIndex = 19;
             this.buttonSum.Text = "+";
             this.buttonSum.UseVisualStyleBackColor = false;
+            this.buttonSum.Click += new System.EventHandler(this.buttonSum_Click);
             // 
             // buttonThree
             // 
@@ -379,6 +380,7 @@ namespace Calculator
             this.buttonResult.TabIndex = 50;
             this.buttonResult.Text = "=";
             this.buttonResult.UseVisualStyleBackColor = false;
+            this.buttonResult.Click += new System.EventHandler(this.buttonResult_Click);
             this.buttonResult.MouseEnter += new System.EventHandler(this.buttonResult_MouseEnter);
             this.buttonResult.MouseLeave += new System.EventHandler(this.buttonResult_MouseLeave);
             // 

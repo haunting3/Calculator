@@ -7,15 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Calculator.Views;
+using Calculator.Presenters;
 
 namespace Calculator
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form, ICalculator
     {
         public Form1()
         {
             InitializeComponent();
         }
+
+        private CalculatorPresenter presenter;
+
+        public string TextNumberOne { get; set; }
+        public string TextNumberTwo { get; set; }
+        public string TextResult { get; set; }
 
         private void buttonResult_MouseEnter(object sender, EventArgs e)
         {
@@ -75,6 +83,20 @@ namespace Calculator
         private void buttonNine_Click(object sender, EventArgs e)
         {
             textBoxResult.Text += "9";
+        }
+
+        private void buttonResult_Click(object sender, EventArgs e)
+        {
+            TextNumberTwo = textBoxResult.Text;
+            presenter = new CalculatorPresenter(this);
+            presenter.CalcSum();
+            textBoxResult.Text = TextResult;
+        }
+
+        private void buttonSum_Click(object sender, EventArgs e)
+        {
+            TextNumberOne = textBoxResult.Text;
+            textBoxResult.Text = "0";
         }
     }
 }
