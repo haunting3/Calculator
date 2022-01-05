@@ -434,6 +434,7 @@ namespace Calculator
             this.ButtonSign.TabIndex = 20;
             this.ButtonSign.Text = "+/-";
             this.ButtonSign.UseVisualStyleBackColor = false;
+            this.ButtonSign.Click += new System.EventHandler(this.ButtonSign_Click);
             // 
             // textBoxResult
             // 

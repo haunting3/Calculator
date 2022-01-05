@@ -19,13 +19,38 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private CalculatorPresenter presenter;
+        private CalculatorPresenter _presenter;
 
         public string TextNumberOne { get; set; }
         public string TextNumberTwo { get; set; }
         public string TextResult { get; set; }
-
         public string mathOperator = null;
+
+        private void Teste (string numberTwo)
+        {
+            _presenter = new CalculatorPresenter(this);
+            if (String.Equals(TextResult, numberTwo))
+                TextNumberOne = numberTwo;
+            else
+                TextNumberTwo = numberTwo;
+
+            switch (mathOperator)
+            {
+                case "+":
+                    _presenter.CalcSum();
+                    break;
+                case "-":
+                    _presenter.CalcSubtraction();
+                    break;
+                case "*":
+                    _presenter.CalcMultiplication();
+                    break;
+                case "/":
+                    _presenter.CalcDivison();
+                    break;
+            }
+            textBoxResult.Text = TextResult;
+        }
         private void ButtonResult_MouseEnter(object sender, EventArgs e)
         {
             ButtonResult.BackColor = Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(111)))), ((int)(((byte)(184)))));
@@ -127,24 +152,7 @@ namespace Calculator
 
         private void ButtonResult_Click(object sender, EventArgs e)
         {
-            TextNumberTwo = textBoxResult.Text;
-            presenter = new CalculatorPresenter(this);
-            switch (mathOperator)
-            {
-                case "+":
-                    presenter.CalcSum();
-                    break;
-                case "-":
-                    presenter.CalcSubtraction();
-                    break;
-                case "*":
-                    presenter.CalcMultiplication();
-                    break;
-                case "/":
-                    presenter.CalcDivison();
-                    break;
-            }
-            textBoxResult.Text = TextResult;
+            Teste(textBoxResult.Text);
         }
 
         private void ButtonSum_Click(object sender, EventArgs e)
@@ -173,6 +181,13 @@ namespace Calculator
             mathOperator = "/";
             TextNumberOne = textBoxResult.Text;
             textBoxResult.Text = "0";
+        }
+
+        private void ButtonSign_Click(object sender, EventArgs e)
+        {
+            mathOperator = "*";
+            TextNumberOne = textBoxResult.Text;
+            Teste("-1");
         }
     }
 }
