@@ -10,9 +10,25 @@ namespace Calculator.Models
     {
         public double NumberOne { get; set; }
         public double NumberTwo { get; set; }
+
         public double Sum()
         {
             return NumberOne + NumberTwo;
+        }
+
+        public double Subtraction()
+        {
+            return NumberOne - NumberTwo;
+        }
+
+        public double Multiplication()
+        {
+            return NumberOne * NumberTwo;
+        }
+
+        public double Divison()
+        {
+            return NumberOne / NumberTwo;
         }
     }
 }
