@@ -10,43 +10,43 @@ namespace Calculator.Presenters
 {
     class CalculatorPresenter
     {
-        CalculatorModel _calculator = new CalculatorModel();
-
-        private ICalculator calculatorView;
+        CalculatorModel calculator = new CalculatorModel();
+        
+        private ICalculator _calculatorView;
 
         public CalculatorPresenter(ICalculator view)
         {
-            calculatorView = view;
+            _calculatorView = view;
         }
 
         public void ConnectBetweenModelAndView()
         {
-            _calculator.NumberOne = Convert.ToDouble(calculatorView.TextNumberOne);
-            _calculator.NumberTwo = Convert.ToDouble(calculatorView.TextNumberTwo);
+            calculator.NumberOne = Convert.ToDouble(_calculatorView.TextNumberOne);
+            calculator.NumberTwo = Convert.ToDouble(_calculatorView.TextNumberTwo);
         }
 
         public void CalcSum()
         {
             ConnectBetweenModelAndView();
-            calculatorView.TextResult = _calculator.Sum().ToString();
+            _calculatorView.TextResult = calculator.Sum().ToString();
         }
 
         public void CalcSubtraction()
         {
             ConnectBetweenModelAndView();
-            calculatorView.TextResult = _calculator.Subtraction().ToString();
+            _calculatorView.TextResult = calculator.Subtraction().ToString();
         }
 
         public void CalcMultiplication()
         {
             ConnectBetweenModelAndView();
-            calculatorView.TextResult = _calculator.Multiplication().ToString();
+            _calculatorView.TextResult = calculator.Multiplication().ToString();
         }
 
         public void CalcDivison()
         {
             ConnectBetweenModelAndView();
-            calculatorView.TextResult = _calculator.Divison().ToString();
+            _calculatorView.TextResult = calculator.Divison().ToString();
         }
     }
 }

@@ -26,23 +26,23 @@ namespace Calculator
         public string TextResult { get; set; }
 
         public string mathOperator = null;
-        private void buttonResult_MouseEnter(object sender, EventArgs e)
+        private void ButtonResult_MouseEnter(object sender, EventArgs e)
         {
-            buttonResult.BackColor = Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(111)))), ((int)(((byte)(184)))));
+            ButtonResult.BackColor = Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(111)))), ((int)(((byte)(184)))));
         }
 
-        private void buttonResult_MouseLeave(object sender, EventArgs e)
+        private void ButtonResult_MouseLeave(object sender, EventArgs e)
         {
-            buttonResult.BackColor = Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(67)))), ((int)(((byte)(105)))));
+            ButtonResult.BackColor = Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(67)))), ((int)(((byte)(105)))));
         }
 
-        private void buttonZero_Click(object sender, EventArgs e)
+        private void ButtonZero_Click(object sender, EventArgs e)
         {
             if(textBoxResult.Text != "0")
                 textBoxResult.Text += "0";
         }
 
-        private void buttonOne_Click(object sender, EventArgs e)
+        private void ButtonOne_Click(object sender, EventArgs e)
         {
             if (textBoxResult.Text != "0")
                 textBoxResult.Text += "1";
@@ -50,7 +50,7 @@ namespace Calculator
                 textBoxResult.Text = "1";
         }
 
-        private void buttonTwo_Click(object sender, EventArgs e)
+        private void ButtonTwo_Click(object sender, EventArgs e)
         {
             if (textBoxResult.Text != "0")
                 textBoxResult.Text += "2";
@@ -58,7 +58,7 @@ namespace Calculator
                 textBoxResult.Text = "2";
         }
 
-        private void buttonThree_Click(object sender, EventArgs e)
+        private void ButtonThree_Click(object sender, EventArgs e)
         {
             if (textBoxResult.Text != "0")
                 textBoxResult.Text += "3";
@@ -66,7 +66,7 @@ namespace Calculator
                 textBoxResult.Text = "3";
         }
 
-        private void buttonFour_Click(object sender, EventArgs e)
+        private void ButtonFour_Click(object sender, EventArgs e)
         {
             if (textBoxResult.Text != "0")
                 textBoxResult.Text += "4";
@@ -74,7 +74,7 @@ namespace Calculator
                 textBoxResult.Text = "4";
         }
 
-        private void buttonFive_Click(object sender, EventArgs e)
+        private void ButtonFive_Click(object sender, EventArgs e)
         {
             if (textBoxResult.Text != "0")
                 textBoxResult.Text += "5";
@@ -82,7 +82,7 @@ namespace Calculator
                 textBoxResult.Text = "5";
         }
 
-        private void buttonSix_Click(object sender, EventArgs e)
+        private void ButtonSix_Click(object sender, EventArgs e)
         {
             if (textBoxResult.Text != "0")
                 textBoxResult.Text += "6";
@@ -90,7 +90,7 @@ namespace Calculator
                 textBoxResult.Text = "6";
         }
 
-        private void buttonSeven_Click(object sender, EventArgs e)
+        private void ButtonSeven_Click(object sender, EventArgs e)
         {
             if (textBoxResult.Text != "0")
                 textBoxResult.Text += "7";
@@ -98,7 +98,7 @@ namespace Calculator
                 textBoxResult.Text = "7";
         }
 
-        private void buttonEight_Click(object sender, EventArgs e)
+        private void ButtonEight_Click(object sender, EventArgs e)
         {
             if (textBoxResult.Text != "0")
                 textBoxResult.Text += "8";
@@ -106,7 +106,7 @@ namespace Calculator
                 textBoxResult.Text = "8";
         }
 
-        private void buttonNine_Click(object sender, EventArgs e)
+        private void ButtonNine_Click(object sender, EventArgs e)
         {
             if (textBoxResult.Text != "0")
                 textBoxResult.Text += "9";
@@ -114,12 +114,18 @@ namespace Calculator
                 textBoxResult.Text = "9";
         }
 
-        private void buttonDot_Click(object sender, EventArgs e)
+        private void ButtonDot_Click(object sender, EventArgs e)
         {
             textBoxResult.Text += ".";
         }
 
-        private void buttonResult_Click(object sender, EventArgs e)
+        private void ButtonDelete_Click(object sender, EventArgs e)
+        {
+            if (textBoxResult.Text.Length != 0)
+                textBoxResult.Text = textBoxResult.Text.Remove(textBoxResult.Text.Length - 1);
+        }
+
+        private void ButtonResult_Click(object sender, EventArgs e)
         {
             TextNumberTwo = textBoxResult.Text;
             presenter = new CalculatorPresenter(this);
@@ -141,38 +147,32 @@ namespace Calculator
             textBoxResult.Text = TextResult;
         }
 
-        private void buttonSum_Click(object sender, EventArgs e)
+        private void ButtonSum_Click(object sender, EventArgs e)
         {
             mathOperator = "+";
             TextNumberOne = textBoxResult.Text;
             textBoxResult.Text = "0";
         }
 
-        private void buttonSubtraction_Click(object sender, EventArgs e)
+        private void ButtonSubtraction_Click(object sender, EventArgs e)
         {
             mathOperator = "-";
             TextNumberOne = textBoxResult.Text;
             textBoxResult.Text = "0";
         }
 
-        private void buttonMultiplication_Click(object sender, EventArgs e)
+        private void ButtonMultiplication_Click(object sender, EventArgs e)
         {
             mathOperator = "*";
             TextNumberOne = textBoxResult.Text;
             textBoxResult.Text = "0";
         }
 
-        private void buttonDivison_Click(object sender, EventArgs e)
+        private void ButtonDivison_Click(object sender, EventArgs e)
         {
             mathOperator = "/";
             TextNumberOne = textBoxResult.Text;
             textBoxResult.Text = "0";
-        }
-
-        private void buttonDelete_Click(object sender, EventArgs e)
-        {
-            if(textBoxResult.Text.Length != 0)
-                textBoxResult.Text = textBoxResult.Text.Remove(textBoxResult.Text.Length - 1);
         }
     }
 }

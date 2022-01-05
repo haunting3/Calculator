@@ -10,6 +10,7 @@ namespace Calculator.Models
     {
         public double NumberOne { get; set; }
         public double NumberTwo { get; set; }
+
         public double Sum()
         {
             return NumberOne + NumberTwo;
@@ -19,10 +20,12 @@ namespace Calculator.Models
         {
             return NumberOne - NumberTwo;
         }
+
         public double Multiplication()
         {
             return NumberOne * NumberTwo;
         }
+
         public double Divison()
         {
             return NumberOne / NumberTwo;
