@@ -203,5 +203,28 @@ namespace Calculator
             TextNumberTwo = "0";
             textBoxResult.Text = "0";
         }
+
+        private void ButtonSquareRoot_Click(object sender, EventArgs e)
+        {
+            textBoxResult.Text = Convert.ToString(Math.Sqrt(Convert.ToDouble(textBoxResult.Text)));
+        }
+
+        private void ButtonPowerTwo_Click(object sender, EventArgs e)
+        {
+            textBoxResult.Text = Convert.ToString(Math.Pow(Convert.ToDouble(textBoxResult.Text), 2));
+        }
+
+        private void ButtonOneDivided_Click(object sender, EventArgs e)
+        {
+            textBoxResult.Text = Convert.ToString((1/Convert.ToDouble(textBoxResult.Text)));
+        }
+
+        private void ButtonPercent_Click(object sender, EventArgs e)
+        {
+            if(mathOperator == "+" || mathOperator == "-")
+                textBoxResult.Text = Convert.ToString(Convert.ToDouble(TextNumberOne)*(Convert.ToDouble(textBoxResult.Text)/100));
+            else
+                textBoxResult.Text = Convert.ToString((Convert.ToDouble(textBoxResult.Text) / 100));
+        }
     }
 }

@@ -70,6 +70,7 @@ namespace Calculator
             this.ButtonPercent.TabIndex = 0;
             this.ButtonPercent.Text = "%";
             this.ButtonPercent.UseVisualStyleBackColor = false;
+            this.ButtonPercent.Click += new System.EventHandler(this.ButtonPercent_Click);
             // 
             // ButtonCancelEntry
             // 
@@ -149,6 +150,7 @@ namespace Calculator
             this.ButtonSquareRoot.TabIndex = 6;
             this.ButtonSquareRoot.Text = "²√x";
             this.ButtonSquareRoot.UseVisualStyleBackColor = false;
+            this.ButtonSquareRoot.Click += new System.EventHandler(this.ButtonSquareRoot_Click);
             // 
             // ButtonPowerTwo
             // 
@@ -164,6 +166,7 @@ namespace Calculator
             this.ButtonPowerTwo.TabIndex = 5;
             this.ButtonPowerTwo.Text = "x²";
             this.ButtonPowerTwo.UseVisualStyleBackColor = false;
+            this.ButtonPowerTwo.Click += new System.EventHandler(this.ButtonPowerTwo_Click);
             // 
             // ButtonOneDivided
             // 
@@ -179,6 +182,7 @@ namespace Calculator
             this.ButtonOneDivided.TabIndex = 4;
             this.ButtonOneDivided.Text = "1/x";
             this.ButtonOneDivided.UseVisualStyleBackColor = false;
+            this.ButtonOneDivided.Click += new System.EventHandler(this.ButtonOneDivided_Click);
             // 
             // ButtonMultiplication
             // 
