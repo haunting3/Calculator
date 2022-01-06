@@ -146,8 +146,10 @@ namespace Calculator
 
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
-            if (textBoxResult.Text.Length != 0)
+            if (textBoxResult.Text.Length > 1)
                 textBoxResult.Text = textBoxResult.Text.Remove(textBoxResult.Text.Length - 1);
+            else
+                textBoxResult.Text = "0";
         }
 
         private void ButtonResult_Click(object sender, EventArgs e)
@@ -188,6 +190,18 @@ namespace Calculator
             mathOperator = "*";
             TextNumberOne = textBoxResult.Text;
             Teste("-1");
+        }
+
+        private void ButtonCancelEntry_Click(object sender, EventArgs e)
+        {
+            textBoxResult.Text = "0";
+        }
+
+        private void ButtonClear_Click(object sender, EventArgs e)
+        {
+            TextNumberOne = "0";
+            TextNumberTwo = "0";
+            textBoxResult.Text = "0";
         }
     }
 }

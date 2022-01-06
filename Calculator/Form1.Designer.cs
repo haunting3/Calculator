@@ -85,6 +85,7 @@ namespace Calculator
             this.ButtonCancelEntry.TabIndex = 1;
             this.ButtonCancelEntry.Text = "CE";
             this.ButtonCancelEntry.UseVisualStyleBackColor = false;
+            this.ButtonCancelEntry.Click += new System.EventHandler(this.ButtonCancelEntry_Click);
             // 
             // ButtonClear
             // 
@@ -100,6 +101,7 @@ namespace Calculator
             this.ButtonClear.TabIndex = 2;
             this.ButtonClear.Text = "C";
             this.ButtonClear.UseVisualStyleBackColor = false;
+            this.ButtonClear.Click += new System.EventHandler(this.ButtonClear_Click);
             // 
             // ButtonDelete
             // 
