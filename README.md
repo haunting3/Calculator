@@ -46,7 +46,8 @@ The following tools were used in the construction of the project:
 - `C#`
 - `DotNet Framework v4.7.2`
 
-<h2 id="how-to-contribute">How to contribute</h3>
+<h2 id="how-to-contribute">How to contribute</h2>
+
 1. Fork the project.
 2. Create a new branch with your changes: `git checkout -b my-feature`
 3. Save your changes and create a commit message telling you what you did: `git commit -m" feature: My new feature "`
